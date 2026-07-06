@@ -300,7 +300,7 @@ export default function Home() {
             
             <div>
               <span className="text-brand-accent text-xs font-bold uppercase tracking-wider block mb-2">تواصل معنا اليوم</span>
-              <h2 className="text-3xl font-black mb-6">مرحباً بك في مركز صيانة ديربا كونسول</h2>
+              <h2 className="text-3xl font-black mb-6">مرحباً بك في مركز صيانة جربة كونسول</h2>
               
               <div className="space-y-6 text-gray-300 text-sm">
                 <div className="flex items-start gap-3">
