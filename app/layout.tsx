@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata } from "next"; // تم إلغاء التعليق هنا ليعمل الكود بدون أخطاء
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -15,7 +15,20 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "جربة كونسول - مركز صيانة أجهزة بلايستيشن والكونسول",
   description: "المركز الأول لإصلاح وصيانة الكونسول في جزيرة جربة. إصلاح احترافي لأجهزة بلايستيشن 4 وبلايستيشن 5 والتحكم بأسعار تنافسية وضمان موثوق.",
+  // هنا تم دمج كلماتك المفتاحية الستة بالطريقة البرمجية الصحيحة لـ Next.js
+  keywords: [
+    "إصلاح بلايستيشن جربة",
+    "ألعاب بلايستيشن جربة",
+    "réparation playstation Djerba",
+    "gaming djerba",
+    "jeux video djerba",
+    "manette djerba"
+  ],
+  alternates: {
+    canonical: 'https://www.djerbaconsole.com',
+  },
 };
+
 export default function RootLayout({
   children,
 }: Readonly<{
