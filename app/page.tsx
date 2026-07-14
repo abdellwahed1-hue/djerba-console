@@ -315,7 +315,7 @@ export default function Home() {
                   <span className="text-xl">🕒</span>
                   <div>
                     <h4 className="font-bold text-white text-base">أوقات العمل</h4>
-                    <p className="mt-1">كامل أيام الأسبوع (ما عدا الأحد)</p>
+                    <p className="mt-1">كامل أيام الأسبوع </p>
                     <p className="text-xs text-gray-400 mt-0.5">من الساعة 09:00 صباحاً حتى الساعة 08:00 مساءً</p>
                   </div>
                 </div>
