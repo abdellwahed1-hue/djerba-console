@@ -307,7 +307,7 @@ export default function Home() {
                   <span className="text-xl">📍</span>
                   <div>
                     <h4 className="font-bold text-white text-base">الموقع الجغرافي</h4>
-                    <p className="mt-1">جربة، تونس (نوفر الخدمة لكافة المناطق: حومة السوق، ميدون، سدويكش، آجيم)</p>
+                    <p className="mt-1">سدويكش، جربة (بجانب مركز البريد)</p>
                   </div>
                 </div>
 
