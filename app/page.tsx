@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 
 export default function Home() {
-  const [activeTab, setActiveTab] = useState<'maintenance' | 'controllers' | 'consoles'>('maintenance');
+  const [activeTab, setActiveTab] = useState<'maintenance' | 'controllers' | 'consoles' | 'jailbreak'>('maintenance');
 
   const galleryItems = [
     {
@@ -117,10 +117,10 @@ export default function Home() {
             <p className="text-gray-500 mt-2 text-sm">أسعار واضحة بالدينار التونسي ومنافسة بدون تكاليف مخفية</p>
           </div>
 
-          <div className="flex justify-center mb-8 bg-white p-1.5 rounded-xl shadow-xs max-w-md mx-auto border border-gray-200">
+          <div className="flex justify-center mb-8 bg-white p-1.5 rounded-xl shadow-xs max-w-2xl mx-auto border border-gray-200 overflow-x-auto">
             <button
               onClick={() => setActiveTab('maintenance')}
-              className={`w-full py-2.5 text-sm font-bold rounded-lg transition-all duration-200 ${
+              className={`w-full py-2.5 px-3 text-sm font-bold rounded-lg transition-all duration-200 whitespace-nowrap ${
                 activeTab === 'maintenance' 
                   ? 'bg-blue-600 text-white shadow-xs' 
                   : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
@@ -130,7 +130,7 @@ export default function Home() {
             </button>
             <button
               onClick={() => setActiveTab('controllers')}
-              className={`w-full py-2.5 text-sm font-bold rounded-lg transition-all duration-200 ${
+              className={`w-full py-2.5 px-3 text-sm font-bold rounded-lg transition-all duration-200 whitespace-nowrap ${
                 activeTab === 'controllers' 
                   ? 'bg-blue-600 text-white shadow-xs' 
                   : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
@@ -140,13 +140,23 @@ export default function Home() {
             </button>
             <button
               onClick={() => setActiveTab('consoles')}
-              className={`w-full py-2.5 text-sm font-bold rounded-lg transition-all duration-200 ${
+              className={`w-full py-2.5 px-3 text-sm font-bold rounded-lg transition-all duration-200 whitespace-nowrap ${
                 activeTab === 'consoles' 
                   ? 'bg-blue-600 text-white shadow-xs' 
                   : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
               }`}
             >
               تنصيب الألعاب
+            </button>
+            <button
+              onClick={() => setActiveTab('jailbreak')}
+              className={`w-full py-2.5 px-3 text-sm font-bold rounded-lg transition-all duration-200 whitespace-nowrap ${
+                activeTab === 'jailbreak' 
+                  ? 'bg-blue-600 text-white shadow-xs' 
+                  : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+              }`}
+            >
+              باتش بلايستيشن
             </button>
           </div>
 
@@ -252,6 +262,29 @@ export default function Home() {
                     <p className="text-gray-500 text-xs mt-0.5">مجموعة واسعة من أحدث وأقوى عناوين الألعاب المفضلة</p>
                   </div>
                   <span className="font-black text-gray-900 text-sm sm:text-base">5 DT</span>
+                </div>
+              </div>
+            )}
+
+            {activeTab === 'jailbreak' && (
+              <div className="divide-y divide-gray-100">
+                <div className="p-4 sm:p-6 flex justify-between items-center bg-gray-50/50">
+                  <span className="font-bold text-gray-900 text-sm sm:text-base">خدمات التعديل والباتش (Jailbreak)</span>
+                  <span className="font-bold text-brand-primary text-sm sm:text-base">السعر</span>
+                </div>
+                <div className="p-4 sm:p-6 flex justify-between items-center hover:bg-gray-50/50 transition">
+                  <div>
+                    <h4 className="font-bold text-gray-900 text-sm sm:text-base">باتش بلايستيشن 3 (PS3)</h4>
+                    <p className="text-gray-500 text-xs mt-0.5">تعديل النظام والنظام المخصص مع تنصيب باقة ألعاب</p>
+                  </div>
+                  <span className="font-black text-gray-900 text-sm sm:text-base">25 DT</span>
+                </div>
+                <div className="p-4 sm:p-6 flex justify-between items-center hover:bg-gray-50/50 transition">
+                  <div>
+                    <h4 className="font-bold text-gray-900 text-sm sm:text-base">باتش بلايستيشن 4 (PS4) الإصدار 11.00 وما دون</h4>
+                    <p className="text-gray-500 text-xs mt-0.5">تعديل البرمجيات وتجهيز الجهاز مع تنصيب باقة ألعاب</p>
+                  </div>
+                  <span className="font-black text-gray-900 text-sm sm:text-base">80 DT</span>
                 </div>
               </div>
             )}
