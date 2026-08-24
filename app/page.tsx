@@ -281,7 +281,7 @@ export default function Home() {
                 </div>
                 <div className="p-4 sm:p-6 flex justify-between items-center hover:bg-gray-50/50 transition">
                   <div>
-                    <h4 className="font-bold text-gray-900 text-sm sm:text-base">باتش بلايستيشن 4 (PS4) الإصدار 11.00 وما دون</h4>
+                    <h4 className="font-bold text-gray-900 text-sm sm:text-base">باتش بلايستيشن 4 (PS4) الإصدار 13.00 وما دون</h4>
                     <p className="text-gray-500 text-xs mt-0.5">تعديل البرمجيات وتجهيز الجهاز مع تنصيب باقة ألعاب</p>
                   </div>
                   <span className="font-black text-gray-900 text-sm sm:text-base">80 DT</span>
