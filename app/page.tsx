@@ -180,7 +180,7 @@ export default function Home() {
                     <h4 className="font-bold text-gray-900 text-sm sm:text-base">جهاز بلايستيشن 4 (PS4)</h4>
                     <p className="text-gray-500 text-xs mt-0.5">حل مشكلة صوت المروحة والحرارة الزائدة</p>
                   </div>
-                  <span className="font-black text-gray-900 text-sm sm:text-base">25 DT</span>
+                  <span className="font-black text-gray-900 text-sm sm:text-base">30 DT</span>
                 </div>
               </div>
             )}
