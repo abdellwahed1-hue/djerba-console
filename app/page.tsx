@@ -187,7 +187,7 @@ export default function Home() {
                     <h4 className="font-bold text-gray-900 text-sm sm:text-base">جهاز بلايستيشن 5 (PS5)</h4>
                     <p className="text-gray-500 text-xs mt-0.5">تنظيف شامل، تجديد المعدن السائل (Thermal Grizzly Conductonaut) وتغيير Thermal Putty احترافي (TG Putty)</p>
                   </div>
-                  <span className="font-black text-gray-900 text-sm sm:text-base">80 DT</span>
+                  <span className="font-black text-gray-900 text-sm sm:text-base">90 DT</span>
                 </div>
               </div>
             )}
