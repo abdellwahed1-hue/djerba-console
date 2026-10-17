@@ -236,10 +236,12 @@ export default function Home() {
           <div className="p-4 sm:p-6 flex justify-between items-center hover:bg-gray-50/50 transition">
             <div>
               <h4 className="font-bold text-gray-900 text-sm sm:text-base">تغيير منفذ الشحن</h4>
-              <p className="text-gray-500 text-
-
-      {/* قسم معرض الأعمال */}
-      <section id="gallery" className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           <p className="text-gray-500 text-xs mt-0.5">إصلاح مشاكل عدم شحن اليد أو التوصيل بالـ USB</p>
+                </div>
+                <span className="font-black text-gray-900 text-sm sm:text-base">20 DT</span>
+              </div>
+{/* قسم معرض الأعمال */}
+<section id="gallery" className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900">جودة العمل (قبل / بعد)</h2>
           <p className="text-gray-500 mt-2 text-sm">شاهد كفاءة ونظافة عمليات الإصلاح والصيانة داخل مركزنا</p>
