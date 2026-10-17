@@ -110,194 +110,133 @@ export default function Home() {
       </section>
 
       {/* قسم الأسعار */}
-      <section id="pricing" className="py-16 bg-gray-50 border-t border-b border-gray-100">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900">قائمة الأسعار الشفافة</h2>
-            <p className="text-gray-500 mt-2 text-sm">أسعار واضحة بالدينار التونسي ومنافسة بدون تكاليف مخفية</p>
+  <section id="pricing" className="py-16 bg-gray-50 border-t border-b border-gray-100">
+  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-10">
+      <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900">قائمة الأسعار الشفافة</h2>
+      <p className="text-gray-500 mt-2 text-sm">أسعار واضحة بالدينار التونسي ومنافسة بدون تكاليف مخفية</p>
+    </div>
+
+    <div className="flex justify-center mb-8 bg-white p-1.5 rounded-xl shadow-xs max-w-2xl mx-auto border border-gray-200 overflow-x-auto">
+      <button
+        onClick={() => setActiveTab('maintenance')}
+        className={`w-full py-2.5 px-3 text-sm font-bold rounded-lg transition-all duration-200 whitespace-nowrap ${
+          activeTab === 'maintenance' 
+            ? 'bg-blue-600 text-white shadow-xs' 
+            : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+        }`}
+      >
+        الصيانة والتنظيف
+      </button>
+      <button
+        onClick={() => setActiveTab('controllers')}
+        className={`w-full py-2.5 px-3 text-sm font-bold rounded-lg transition-all duration-200 whitespace-nowrap ${
+          activeTab === 'controllers' 
+            ? 'bg-blue-600 text-white shadow-xs' 
+            : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+        }`}
+      >
+        أجهزة التحكم
+      </button>
+      <button
+        onClick={() => setActiveTab('consoles')}
+        className={`w-full py-2.5 px-3 text-sm font-bold rounded-lg transition-all duration-200 whitespace-nowrap ${
+          activeTab === 'consoles' 
+            ? 'bg-blue-600 text-white shadow-xs' 
+            : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+        }`}
+      >
+        تنصيب الألعاب
+      </button>
+      <button
+        onClick={() => setActiveTab('jailbreak')}
+        className={`w-full py-2.5 px-3 text-sm font-bold rounded-lg transition-all duration-200 whitespace-nowrap ${
+          activeTab === 'jailbreak' 
+            ? 'bg-blue-600 text-white shadow-xs' 
+            : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+        }`}
+      >
+        باتش بلايستيشن
+      </button>
+    </div>
+
+    <div className="bg-white rounded-2xl border border-gray-200 shadow-xs overflow-hidden">
+      
+      {activeTab === 'maintenance' && (
+        <div className="divide-y divide-gray-100">
+          <div className="p-4 sm:p-6 flex justify-between items-center bg-gray-50/50">
+            <span className="font-bold text-gray-900 text-sm sm:text-base">خدمات التنظيف ومعالجة الحرارة الشاملة</span>
+            <span className="font-bold text-brand-primary text-sm sm:text-base">السعر</span>
           </div>
-
-          <div className="flex justify-center mb-8 bg-white p-1.5 rounded-xl shadow-xs max-w-2xl mx-auto border border-gray-200 overflow-x-auto">
-            <button
-              onClick={() => setActiveTab('maintenance')}
-              className={`w-full py-2.5 px-3 text-sm font-bold rounded-lg transition-all duration-200 whitespace-nowrap ${
-                activeTab === 'maintenance' 
-                  ? 'bg-blue-600 text-white shadow-xs' 
-                  : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
-              }`}
-            >
-              الصيانة والتنظيف
-            </button>
-            <button
-              onClick={() => setActiveTab('controllers')}
-              className={`w-full py-2.5 px-3 text-sm font-bold rounded-lg transition-all duration-200 whitespace-nowrap ${
-                activeTab === 'controllers' 
-                  ? 'bg-blue-600 text-white shadow-xs' 
-                  : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
-              }`}
-            >
-              أجهزة التحكم
-            </button>
-            <button
-              onClick={() => setActiveTab('consoles')}
-              className={`w-full py-2.5 px-3 text-sm font-bold rounded-lg transition-all duration-200 whitespace-nowrap ${
-                activeTab === 'consoles' 
-                  ? 'bg-blue-600 text-white shadow-xs' 
-                  : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
-              }`}
-            >
-              تنصيب الألعاب
-            </button>
-            <button
-              onClick={() => setActiveTab('jailbreak')}
-              className={`w-full py-2.5 px-3 text-sm font-bold rounded-lg transition-all duration-200 whitespace-nowrap ${
-                activeTab === 'jailbreak' 
-                  ? 'bg-blue-600 text-white shadow-xs' 
-                  : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
-              }`}
-            >
-              باتش بلايستيشن
-            </button>
+          <div className="p-4 sm:p-6 flex justify-between items-center hover:bg-gray-50/50 transition">
+            <div>
+              <h4 className="font-bold text-gray-900 text-sm sm:text-base">جهاز بلايستيشن 3 (PS3)</h4>
+              <p className="text-gray-500 text-xs mt-0.5">تنظيف داخلي كامل مع تطبيق معجون حراري أصلي (Arctic MX-4)</p>
+            </div>
+            <span className="font-black text-gray-900 text-sm sm:text-base">35 DT</span>
           </div>
-
-          <div className="bg-white rounded-2xl border border-gray-200 shadow-xs overflow-hidden">
-            
-            {activeTab === 'maintenance' && (
-              <div className="divide-y divide-gray-100">
-                <div className="p-4 sm:p-6 flex justify-between items-center bg-gray-50/50">
-                  <span className="font-bold text-gray-900 text-sm sm:text-base">تنظيف واستبدال معجون حراري (Arctic MX-4)</span>
-                  <span className="font-bold text-brand-primary text-sm sm:text-base">السعر</span>
-                </div>
-                <div className="p-4 sm:p-6 flex justify-between items-center hover:bg-gray-50/50 transition">
-                  <div>
-                    <h4 className="font-bold text-gray-900 text-sm sm:text-base">جهاز بلايستيشن 3 (PS3)</h4>
-                    <p className="text-gray-500 text-xs mt-0.5">تنظيف داخلي كامل مع تطبيق معجون حراري أصلي</p>
-                  </div>
-                  <span className="font-black text-gray-900 text-sm sm:text-base">35 DT</span>
-                </div>
-                <div className="p-4 sm:p-6 flex justify-between items-center hover:bg-gray-50/50 transition">
-                  <div>
-                    <h4 className="font-bold text-gray-900 text-sm sm:text-base">جهاز بلايستيشن 4 (PS4)</h4>
-                    <p className="text-gray-500 text-xs mt-0.5">حل مشكلة صوت المروحة والحرارة الزائدة</p>
-                  </div>
-                  <span className="font-black text-gray-900 text-sm sm:text-base">30 DT</span>
-                </div>
-              </div>
-            )}
-
-            {activeTab === 'controllers' && (
-              <div className="divide-y divide-gray-100">
-                <div className="p-4 sm:p-6 flex justify-between items-center bg-gray-50/50">
-                  <span className="font-bold text-gray-900 text-sm sm:text-base">قطع غيار وإصلاح اليدين</span>
-                  <span className="font-bold text-brand-primary text-sm sm:text-base">السعر</span>
-                </div>
-                <div className="p-4 sm:p-6 flex justify-between items-center hover:bg-gray-50/50 transition">
-                  <div>
-                    <h4 className="font-bold text-gray-900 text-sm sm:text-base">استبدال حساس جديد (Potentiometer)</h4>
-                    <p className="text-gray-500 text-xs mt-0.5">حل مشاكل الانحراف البسيطة والتقطيع في التوجيه</p>
-                  </div>
-                  <span className="font-black text-gray-900 text-sm sm:text-base">12 DT</span>
-                </div>
-                <div className="p-4 sm:p-6 flex justify-between items-center hover:bg-gray-50/50 transition">
-                  <div>
-                    <h4 className="font-bold text-gray-900 text-sm sm:text-base">استبدال الأنالوق كامل (Analog Stick)</h4>
-                    <p className="text-gray-500 text-xs mt-0.5">تغيير كامل لقطعة الميكانيك الداخلية للأنالوق</p>
-                  </div>
-                  <span className="font-black text-gray-900 text-sm sm:text-base">20 DT</span>
-                </div>
-                <div className="p-4 sm:p-6 flex justify-between items-center hover:bg-gray-50/50 transition">
-                  <div>
-                    <h4 className="font-bold text-gray-900 text-sm sm:text-base">استبدال أنالوق Hall Effect (مضاد للانحراف)</h4>
-                    <p className="text-gray-500 text-xs mt-0.5">تقنية الحساسات المغناطيسية لمنع ظهور الانجراف مستقبلاً</p>
-                  </div>
-                  <span className="font-black text-gray-900 text-sm sm:text-base">30 DT</span>
-                </div>
-                <div className="p-4 sm:p-6 flex justify-between items-center hover:bg-gray-50/50 transition">
-                  <div>
-                    <h4 className="font-bold text-gray-900 text-sm sm:text-base">أنالوق Hall Effect TMR (مضاد للانحراف - الجيل الثاني)</h4>
-                    <p className="text-gray-500 text-xs mt-0.5">أحدث تقنية لأعلى دقة استجابة وعمر افتراضي طويل جداً</p>
-                  </div>
-                  <span className="font-black text-gray-900 text-sm sm:text-base">35 DT</span>
-                </div>
-                <div className="p-4 sm:p-6 flex justify-between items-center hover:bg-gray-50/50 transition">
-                  <div>
-                    <h4 className="font-bold text-gray-900 text-sm sm:text-base">استبدال الأزرار</h4>
-                    <p className="text-gray-500 text-xs mt-0.5">حل مشاكل عدم الاستجابة أو الأزرار العالقة</p>
-                  </div>
-                  <span className="font-black text-gray-900 text-sm sm:text-base">12 DT</span>
-                </div>
-                <div className="p-4 sm:p-6 flex justify-between items-center hover:bg-gray-50/50 transition">
-                  <div>
-                    <h4 className="font-bold text-gray-900 text-sm sm:text-base">تغيير منفذ الشحن</h4>
-                    <p className="text-gray-500 text-xs mt-0.5">إصلاح مشاكل عدم شحن اليد أو التوصيل بالـ USB</p>
-                  </div>
-                  <span className="font-black text-gray-900 text-sm sm:text-base">20 DT</span>
-                </div>
-                <div className="p-4 sm:p-6 flex justify-between items-center hover:bg-gray-50/50 transition">
-                  <div>
-                    <h4 className="font-bold text-gray-900 text-sm sm:text-base">غطاء أنالوق (Capuchon) عدد 2</h4>
-                    <p className="text-gray-500 text-xs mt-0.5">تغيير الأغطية البلاستيكية الخارجية المتآكلة للأنالوق</p>
-                  </div>
-                  <span className="font-black text-gray-900 text-sm sm:text-base">12 DT</span>
-                </div>
-                <div className="p-4 sm:p-6 flex justify-between items-center hover:bg-gray-50/50 transition">
-                  <div>
-                    <h4 className="font-bold text-gray-900 text-sm sm:text-base">اللوحة الشريطية (Ribbon Circuit Board)</h4>
-                    <p className="text-gray-500 text-xs mt-0.5">استبدال شريط التوصيل الداخلي للأزرار والـ Flex</p>
-                  </div>
-                  <span className="font-black text-gray-900 text-sm sm:text-base">20 DT</span>
-                </div>
-              </div>
-            )}
-
-            {activeTab === 'consoles' && (
-              <div className="divide-y divide-gray-100">
-                <div className="p-4 sm:p-6 flex justify-between items-center bg-gray-50/50">
-                  <span className="font-bold text-gray-900 text-sm sm:text-base">تنصيب وتثبيت الألعاب</span>
-                  <span className="font-bold text-brand-primary text-sm sm:text-base">السعر للعبة الواحدة</span>
-                </div>
-                <div className="p-4 sm:p-6 flex justify-between items-center hover:bg-gray-50/50 transition">
-                  <div>
-                    <h4 className="font-bold text-gray-900 text-sm sm:text-base">تنصيب ألعاب بلايستيشن 3، 4، 5</h4>
-                    <p className="text-gray-500 text-xs mt-0.5">مجموعة واسعة من أحدث وأقوى عناوين الألعاب المفضلة</p>
-                  </div>
-                  <span className="font-black text-gray-900 text-sm sm:text-base">5 DT</span>
-                </div>
-              </div>
-            )}
-
-            {activeTab === 'jailbreak' && (
-              <div className="divide-y divide-gray-100">
-                <div className="p-4 sm:p-6 flex justify-between items-center bg-gray-50/50">
-                  <span className="font-bold text-gray-900 text-sm sm:text-base">خدمات التعديل والباتش (Jailbreak)</span>
-                  <span className="font-bold text-brand-primary text-sm sm:text-base">السعر</span>
-                </div>
-                <div className="p-4 sm:p-6 flex justify-between items-center hover:bg-gray-50/50 transition">
-                  <div>
-                    <h4 className="font-bold text-gray-900 text-sm sm:text-base">باتش بلايستيشن 3 (PS3)</h4>
-                    <p className="text-gray-500 text-xs mt-0.5">تعديل النظام والنظام المخصص مع تنصيب باقة ألعاب</p>
-                  </div>
-                  <span className="font-black text-gray-900 text-sm sm:text-base">25 DT</span>
-                </div>
-                <div className="p-4 sm:p-6 flex justify-between items-center hover:bg-gray-50/50 transition">
-                  <div>
-                    <h4 className="font-bold text-gray-900 text-sm sm:text-base">باتش بلايستيشن 4 (PS4) الإصدار 13.52 وما دون</h4>
-                    <p className="text-gray-500 text-xs mt-0.5">تعديل البرمجيات وتجهيز الجهاز </p>
-                  </div>
-                  <span className="font-black text-gray-900 text-sm sm:text-base">10 DT</span>
-                </div>
-              </div>
-            )}
-
+          <div className="p-4 sm:p-6 flex justify-between items-center hover:bg-gray-50/50 transition">
+            <div>
+              <h4 className="font-bold text-gray-900 text-sm sm:text-base">جهاز بلايستيشن 4 (PS4)</h4>
+              <p className="text-gray-500 text-xs mt-0.5">تنظيف عميق وحل مشكلة صوت المروحة والحرارة مع معجون Arctic MX-4</p>
+            </div>
+            <span className="font-black text-gray-900 text-sm sm:text-base">30 DT</span>
           </div>
-
-          <div className="text-center mt-6">
-            <p className="text-gray-500 text-xs">
-              * ملاحظة: نضمن لك استخدام قطع غيار أصلية وخامات تبريد ممتازة لأجهزتك لضمان استقرار أدائها الطويل في جربة.
-            </p>
+          <div className="p-4 sm:p-6 flex justify-between items-center hover:bg-gray-50/50 transition">
+            <div>
+              <h4 className="font-bold text-gray-900 text-sm sm:text-base">جهاز بلايستيشن 5 (PS5)</h4>
+              <p className="text-gray-500 text-xs mt-0.5">تنظيف شامل، تجديد المعدن السائل (Thermal Grizzly Conductonaut) وتغيير Thermal Putty احترافي (TG Putty)</p>
+            </div>
+            <span className="font-black text-gray-900 text-sm sm:text-base">80 DT</span>
           </div>
         </div>
-      </section>
+      )}
+
+      {activeTab === 'controllers' && (
+        <div className="divide-y divide-gray-100">
+          <div className="p-4 sm:p-6 flex justify-between items-center bg-gray-50/50">
+            <span className="font-bold text-gray-900 text-sm sm:text-base">قطع غيار وإصلاح اليدين</span>
+            <span className="font-bold text-brand-primary text-sm sm:text-base">السعر</span>
+          </div>
+          <div className="p-4 sm:p-6 flex justify-between items-center hover:bg-gray-50/50 transition">
+            <div>
+              <h4 className="font-bold text-gray-900 text-sm sm:text-base">استبدال حساس جديد (Potentiometer)</h4>
+              <p className="text-gray-500 text-xs mt-0.5">حل مشاكل الانحراف البسيطة والتقطيع في التوجيه</p>
+            </div>
+            <span className="font-black text-gray-900 text-sm sm:text-base">12 DT</span>
+          </div>
+          <div className="p-4 sm:p-6 flex justify-between items-center hover:bg-gray-50/50 transition">
+            <div>
+              <h4 className="font-bold text-gray-900 text-sm sm:text-base">استبدال الأنالوق كامل (Analog Stick)</h4>
+              <p className="text-gray-500 text-xs mt-0.5">تغيير كامل لقطعة الميكانيك الداخلية للأنالوق</p>
+            </div>
+            <span className="font-black text-gray-900 text-sm sm:text-base">20 DT</span>
+          </div>
+          <div className="p-4 sm:p-6 flex justify-between items-center hover:bg-gray-50/50 transition">
+            <div>
+              <h4 className="font-bold text-gray-900 text-sm sm:text-base">استبدال أنالوق Hall Effect (مضاد للانحراف)</h4>
+              <p className="text-gray-500 text-xs mt-0.5">تقنية الحساسات المغناطيسية لمنع ظهور الانجراف مستقبلاً</p>
+            </div>
+            <span className="font-black text-gray-900 text-sm sm:text-base">30 DT</span>
+          </div>
+          <div className="p-4 sm:p-6 flex justify-between items-center hover:bg-gray-50/50 transition">
+            <div>
+              <h4 className="font-bold text-gray-900 text-sm sm:text-base">أنالوق Hall Effect TMR (مضاد للانحراف - الجيل الثاني)</h4>
+              <p className="text-gray-500 text-xs mt-0.5">أحدث تقنية لأعلى دقة استجابة وعمر افتراضي طويل جداً</p>
+            </div>
+            <span className="font-black text-gray-900 text-sm sm:text-base">35 DT</span>
+          </div>
+          <div className="p-4 sm:p-6 flex justify-between items-center hover:bg-gray-50/50 transition">
+            <div>
+              <h4 className="font-bold text-gray-900 text-sm sm:text-base">استبدال الأزرار</h4>
+              <p className="text-gray-500 text-xs mt-0.5">حل مشاكل عدم الاستجابة أو الأزرار العالقة</p>
+            </div>
+            <span className="font-black text-gray-900 text-sm sm:text-base">12 DT</span>
+          </div>
+          <div className="p-4 sm:p-6 flex justify-between items-center hover:bg-gray-50/50 transition">
+            <div>
+              <h4 className="font-bold text-gray-900 text-sm sm:text-base">تغيير منفذ الشحن</h4>
+              <p className="text-gray-500 text-
 
       {/* قسم معرض الأعمال */}
       <section id="gallery" className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
