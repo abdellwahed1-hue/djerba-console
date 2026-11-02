@@ -1,9 +1,10 @@
+TypeScript
 "use client";
 
 import React, { useState } from 'react';
 
 export default function Home() {
-  const [activeTab, setActiveTab] = useState<'maintenance' | 'controllers' | 'consoles' | 'jailbreak'>('maintenance');
+  const [activeTab, setActiveTab] = useState<'maintenance' | 'controllers' | 'consoles' | 'jailbreak' | 'rental'>('maintenance');
 
   const galleryItems = [
     {
@@ -82,7 +83,7 @@ export default function Home() {
           <p className="text-gray-500 mt-2 text-sm">حلول متكاملة لكافة الأعطال لمنصات وأجهزة الجيل الحالي والسابق</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-xs">
             <div className="text-3xl mb-3">🎮</div>
             <h3 className="text-lg font-bold mb-2">أجهزة الكونسول</h3>
@@ -106,6 +107,14 @@ export default function Home() {
               خدمات تنظيف عميقة باستعمال معجون حراري فائق الجودة، بالإضافة لتجهيز الألعاب لكافة منصات البلايستيشن.
             </p>
           </div>
+
+          <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-xs">
+            <div className="text-3xl mb-3">📦</div>
+            <h3 className="text-lg font-bold mb-2">بيع، شراء، كراء أجهزة بلايستيشن 4 وماناتات بلايستيشن 4 و 5</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              توفير أجهزة بلايستيشن 4 ووحدات تحكم (PS4 & PS5) للبيع، الشراء، والكراء بأسعار مناسبة ومع الألعاب المطلوبة.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -117,7 +126,7 @@ export default function Home() {
             <p className="text-gray-500 mt-2 text-sm">أسعار واضحة بالدينار التونسي ومنافسة بدون تكاليف مخفية</p>
           </div>
 
-          <div className="flex justify-center mb-8 bg-white p-1.5 rounded-xl shadow-xs max-w-2xl mx-auto border border-gray-200 overflow-x-auto">
+          <div className="flex justify-center mb-8 bg-white p-1.5 rounded-xl shadow-xs max-w-3xl mx-auto border border-gray-200 overflow-x-auto">
             <button
               onClick={() => setActiveTab('maintenance')}
               className={`w-full py-2.5 px-3 text-sm font-bold rounded-lg transition-all duration-200 whitespace-nowrap ${
@@ -157,6 +166,16 @@ export default function Home() {
               }`}
             >
               باتش بلايستيشن
+            </button>
+            <button
+              onClick={() => setActiveTab('rental')}
+              className={`w-full py-2.5 px-3 text-sm font-bold rounded-lg transition-all duration-200 whitespace-nowrap ${
+                activeTab === 'rental' 
+                  ? 'bg-blue-600 text-white shadow-xs' 
+                  : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+              }`}
+            >
+              بيع، شراء وكراء
             </button>
           </div>
 
@@ -276,6 +295,43 @@ export default function Home() {
                   <div>
                     <h4 className="font-bold text-gray-900 text-sm sm:text-base">باتش بلايستيشن 4 (PS4) الإصدار 13.52 وما دون</h4>
                     <p className="text-gray-500 text-xs mt-0.5">تعديل البرمجيات وتجهيز الجهاز</p>
+                  </div>
+                  <span className="font-black text-gray-900 text-sm sm:text-base">10 DT</span>
+                </div>
+              </div>
+            )}
+
+            {activeTab === 'rental' && (
+              <div className="divide-y divide-gray-100">
+                <div className="p-4 sm:p-6 flex justify-between items-center bg-gray-50/50">
+                  <span className="font-bold text-gray-900 text-sm sm:text-base">عروض الكراء والبيع والشراء</span>
+                  <span className="font-bold text-brand-primary text-sm sm:text-base">السعر</span>
+                </div>
+                <div className="p-4 sm:p-6 flex justify-between items-center hover:bg-gray-50/50 transition">
+                  <div>
+                    <h4 className="font-bold text-gray-900 text-sm sm:text-base">كراء بلايستيشن 4 (3 أيام) - مانات واحدة</h4>
+                    <p className="text-gray-500 text-xs mt-0.5">جهاز PS4 يحتوي على جميع الألعاب المطلوبة مع وحدة تحكم واحدة</p>
+                  </div>
+                  <span className="font-black text-gray-900 text-sm sm:text-base">25 DT</span>
+                </div>
+                <div className="p-4 sm:p-6 flex justify-between items-center hover:bg-gray-50/50 transition">
+                  <div>
+                    <h4 className="font-bold text-gray-900 text-sm sm:text-base">كراء بلايستيشن 4 (3 أيام) - زوز ماناتات</h4>
+                    <p className="text-gray-500 text-xs mt-0.5">جهاز PS4 يحتوي على جميع الألعاب المطلوبة مع وحدتي تحكم (2 ماناتات)</p>
+                  </div>
+                  <span className="font-black text-gray-900 text-sm sm:text-base">35 DT</span>
+                </div>
+                <div className="p-4 sm:p-6 flex justify-between items-center hover:bg-gray-50/50 transition">
+                  <div>
+                    <h4 className="font-bold text-gray-900 text-sm sm:text-base">كراء يد تحكم بلايستيشن 4 (يوم واحد)</h4>
+                    <p className="text-gray-500 text-xs mt-0.5">وحدة تحكم PS4 أصلي جاهزة ومجربة لمدة 24 ساعة</p>
+                  </div>
+                  <span className="font-black text-gray-900 text-sm sm:text-base">7 DT</span>
+                </div>
+                <div className="p-4 sm:p-6 flex justify-between items-center hover:bg-gray-50/50 transition">
+                  <div>
+                    <h4 className="font-bold text-gray-900 text-sm sm:text-base">كراء يد تحكم بلايستيشن 5 (يوم واحد)</h4>
+                    <p className="text-gray-500 text-xs mt-0.5">وحدة تحكم PS5 (DualSense) أصلية لمدة 24 ساعة</p>
                   </div>
                   <span className="font-black text-gray-900 text-sm sm:text-base">10 DT</span>
                 </div>
